@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONO — Магазин одежды</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">MONO.</div>
+        <nav>
+            <a href="#home">Главная</a>
+            <a href="#collection">Коллекция</a>
+            <a href="#about">О магазине</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <p class="subtitle">NEW COLLECTION 2026</p>
+        <h1>Стиль начинается<br>с простоты.</h1>
+        <p>Одежда, которая говорит за тебя.</p>
+        <button onclick="showCollection()">Смотреть коллекцию</button>
+    </section>
+
+    <section class="collection" id="collection">
+        <h2>Наша коллекция</h2>
+
+        <div class="products">
+            <div class="product">
+                <div class="product-image">01</div>
+                <h3>Classic Jacket</h3>
+                <p>18 000 ₸</p>
+            </div>
+
+            <div class="product">
+                <div class="product-image">02</div>
+                <h3>Basic T-Shirt</h3>
+                <p>7 500 ₸</p>
+            </div>
+
+            <div class="product">
+                <div class="product-image">03</div>
+                <h3>Urban Pants</h3>
+                <p>12 000 ₸</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="about">
+        <p>MONO. © 2026 | Современная одежда</p>
+    </footer>
+
+    <script src="interaction.js"></script>
+</body>
+</html>
