@@ -1,0 +1,34 @@
+name: Fashion Store Quality Check
+
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
+
+jobs:
+  quality-control:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download source code
+        uses: actions/checkout@v4
+
+      - name: Validate HTML file
+        run: test -f shop.html
+
+      - name: Validate CSS file
+        run: test -f design.css
+
+      - name: Validate JavaScript file
+        run: test -f interaction.js
+
+      - name: Check JavaScript syntax
+        run: node --check interaction.js
+
+      - name: Verify website title
+        run: grep -q "MONO" shop.html
+
+      - name: Complete quality control
+        run: echo "All checks passed successfully!"
